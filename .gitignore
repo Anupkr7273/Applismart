@@ -1,0 +1,10 @@
+# Root level
+node_modules/
+.env
+
+# Vite Output (Frontend)
+frontend/dist
+
+# IDEs & OS
+.DS_Store
+.vscode/

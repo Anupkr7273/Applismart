@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+/* src/index.css */
+@layer utilities {
+  /* Dark mode support */
+  .dark {
+    --color-gray-900: 17 24 39;
+    --color-gray-300: 209 213 219;
+  }
+
+  /* Smooth transitions */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+}
+
+/* In your CSS */
+@supports not (background-clip: text) {
+  .gradient-text {
+    color: var(--color-primary) !important;
+  }
+}
+
+.group-hover:shadow-md {
+  transition: box-shadow 0.3s ease;
+}
