@@ -1,5 +1,6 @@
 // frontend/src/components/layout/Header.jsx
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import Button from '../components/ui/Button';
 
 const Header = () => (
@@ -23,11 +24,13 @@ const Header = () => (
         </a>
       ))}
     </nav>
+      <div className="flex gap-3">
+      <Link to="/auth">
+        <Button variant="secondary" className="px-4 py-2">
+          Log in
+        </Button>
+      </Link>
 
-    <div className="flex gap-3">
-      <Button variant="secondary" className="px-4 py-2">
-        Log in
-      </Button>
       <Button variant="primary" className="px-4 py-2">
         Register
       </Button>
